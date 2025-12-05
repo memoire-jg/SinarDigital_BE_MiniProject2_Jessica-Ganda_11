@@ -5,5 +5,4 @@ const errorHandler = (err, req, res, next) => {
         success: false,
         error: "Something went wrong on the server"
     });
-
 };
