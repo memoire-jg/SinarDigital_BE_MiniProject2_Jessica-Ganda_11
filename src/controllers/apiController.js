@@ -1,36 +1,53 @@
-import fs from "fs";
-import path from "path";
-
-const filePath = path.join(process.cwd(), "data", "data.json");
-
-const facts = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+import prisma from '../utils/prismaClient.js';  // Add .js extension
 
 // --------------------
 
-export const getFacts = (req, res) => {
-    return res.json(facts);
+export const getFacts = async (req, res) => {
+    try {
+        const facts = await prisma.product.findMany();
+        return res.json(facts);
+    } catch (err) {
+        console.error("Database error:", err);
+        return res.status(500).json({error: "Database error"});
+    }
 }
 
-export const createFacts = (req, res) => {
-    const newId = facts[facts.length - 1].id + 1;
-    const newFact = Object.assign({ id: newId }, req.body);
-    facts.push(newFact);
+export const createFacts = async (req, res) => {
+    try {
+        const { faction, character, fact } = req.body;
 
-    fs.writeFile(filePath, JSON.stringify(facts), (err) => {
-        if (err) return res.json(err);
-        return res.json({ Message: "Successfully created fact!" });
-    });
+        const newFact = await prisma.product.create({
+            data: {
+                faction,
+                character,
+                fact,
+                image: "",
+            }
+        })
+
+        return res.json({
+            message: "Successfully created fact!",
+            data: newFact
+        });
+    } catch (err) {
+        console.error("Database error:", err);
+        return res.status(500).json({error: "Database error"});
+    }
 
 }
 
-export const deleteFacts = (req, res) => {
-    const id = Number(req.params.id);
-    const index = facts.findIndex(f => f.id === id);
+export const deleteFacts = async (req, res) => {
+    try {
+        const id = parseInt(req.params.id);
 
-    facts.splice(index, 1);
+        const facts = await prisma.product.delete({where: { id: id }});
 
-    fs.writeFile(filePath, JSON.stringify(facts), (err) => {
-        if (err) return res.json(err);
-        return res.json({ Message: "Successfully deleted fact!" });
-    });
+        return res.json({
+            message: "Successfuly deleted fact!"
+        });
+        
+    } catch (err) {
+        console.error("Database error:", err);
+        return res.status(500).json({error: "Database error"});
+    }
 };
