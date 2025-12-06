@@ -1,6 +1,6 @@
 import express from "express";
-import home from "./routes/index.js";
-import apiRoutes from "./routes/apiRoutes.js";
+import home from "./src/routes/index.js";
+import apiRoutes from "./src/routes/apiRoutes.js";
 
 const app = express();
 

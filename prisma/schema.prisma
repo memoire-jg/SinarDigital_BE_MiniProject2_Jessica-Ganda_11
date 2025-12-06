@@ -1,16 +1,16 @@
 generator client {
-  provider = "prisma-client"
-  output   = "../src/generated/prisma"
+  provider = "prisma-client-js"
 }
 
 datasource db {
   provider = "mysql"
+  url = env("DATABASE_URL")
 }
 
 model product {
   id        Int     @id @default(autoincrement())
   faction   String
-  character String
+  charName String
   fact      String
   image     String?
 }

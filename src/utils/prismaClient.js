@@ -1,5 +1,4 @@
-import pkg from '@prisma/client';
-const { PrismaClient } = pkg;
+import { PrismaClient } from "../generated/prisma/client.ts"
 
 const prisma = new PrismaClient();
 

@@ -22,5 +22,35 @@
     "faction": "Decepticon",
     "character": "Soundwave",
     "fact": "No one has ever heard of Soundwave's voice since he swore the oath of silence in Kaon."
+  },
+  {
+    "id": 5,
+    "faction": "Decepticon",
+    "character": "Skyquake",
+    "fact": "From him, we learn that not all Decepticons are pure evils."
+  },
+  {
+    "id": 6,
+    "faction": "Autobot",
+    "character": "Arcee",
+    "fact": "Arcee is very good at masking her emotions, even when faced with tremendous loss."
+  },
+  {
+    "id": 7,
+    "faction": "Autobot",
+    "character": "Bumblebee",
+    "fact": "A fierce warrior to the Decepticons, a loyal friend to the Autobots."
+  },
+  {
+    "id": 8,
+    "faction": "Decepticon",
+    "character": "Starscream",
+    "fact": "Honestly, he should lose his T-cog again so we can see more of him in heels XD."
+  },
+  {
+    "id": 9,
+    "faction": "Autobot",
+    "character": "Optimus Prime",
+    "fact": "The last of the Thirteen original Primes."
   }
 ]

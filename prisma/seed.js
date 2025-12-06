@@ -1,5 +1,4 @@
-import pkg from '@prisma/client';
-const { PrismaClient } = pkg;
+import { PrismaClient } from '../src/generated/prisma/client.js';
 import { readFileSync } from 'fs';
 import path from 'path';
 
@@ -16,7 +15,7 @@ async function main() {
                 faction: product.faction,
                 character: product.character,
                 fact: product.fact,
-                image: product.image || "",
+                image: product.image || null,
             }
         });
     }
