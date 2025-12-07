@@ -1,4 +1,4 @@
-import prisma from '../utils/prismaClient.js';  // Add .js extension
+import prisma from '../utils/prismaClient.js';
 
 // --------------------
 
@@ -14,12 +14,12 @@ export const getFacts = async (req, res) => {
 
 export const createFacts = async (req, res) => {
     try {
-        const { faction, character, fact, image } = req.body;
+        const { faction, charName, fact, image } = req.body;
 
         const newFact = await prisma.product.create({
             data: {
                 faction,
-                character,
+                charName,
                 fact,
                 image: image || null,
             }
@@ -39,13 +39,13 @@ export const createFacts = async (req, res) => {
 export const updateFacts = async (req, res) => {
     try {
         const id = parseInt(req.params.id);
-        const { faction, character, fact, image } = req.body;
+        const { faction, charName, fact, image } = req.body;
 
         const newFact = await prisma.product.update({
             where: { id : id },
             data: {
                 faction: faction,
-                character: character,
+                charName: charName,
                 fact: fact,
                 image: image || null,
             }
@@ -80,24 +80,43 @@ export const deleteFacts = async (req, res) => {
 
 export const uploadImage = async (req, res) => {
     try {
-        if (!req.file) {
-            return res.status(400).json({ error: "No file uploaded "});
-        }
-
-        return res.json({
-            message: "Image uploaded successfully",
-            filename: req.file.filename,
-            path: `/uploads/${req.file.filename}`
+        const id = parseInt(req.params.id);
+        await prisma.product.update({
+            where: { id },
+            data: { image: req.file.filename }
         });
+        return res.json({ message: "Image uploaded", image: req.file.filename });
     } catch (err) {
-        console.error("Upload error", err);
-        return res.status(500).json({
-            error: "Upload failed"
-        });
+        return res.status(500).json({ error: "Failed" });
     }
 };
 
 
+export const updateImage = async (req, res) => {
+    try {
+        const id = parseInt(req.params.id);
+        await prisma.product.update({
+            where: { id },
+            data: { image: req.file.filename }
+        });
+        return res.json({ message: "Image updated", image: req.file.filename });
+    } catch (err) {
+        return res.status(500).json({ error: "Failed" });
+    }
+};
+
+export const deleteImage = async (req, res) => {
+    try {
+        const id = parseInt(req.params.id);
+        await prisma.product.update({
+            where: { id },
+            data: { image: null }
+        });
+        return res.json({ message: "Image deleted" });
+    } catch (err) {
+        return res.status(500).json({ error: "Failed" });
+    }
+};
 
 /*
 getimport fs from "fs";

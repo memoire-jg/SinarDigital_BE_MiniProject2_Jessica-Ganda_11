@@ -1,56 +1,122 @@
 [
   {
-    "id": 1,
     "faction": "Autobot",
-    "character": "Optimus Prime",
-    "fact": "He is the de facto leader of the Autobots."
+    "charName": "Optimus Prime",
+    "fact": "He is the de facto leader of the Autobots.",
+    "image": null
   },
   {
-    "id": 2,
-    "faction": "Autobot",
-    "character": "Ratchet",
-    "fact": "His nickname is Hatchet (don't ask why)."
-  },
-  {
-    "id": 3,
     "faction": "Decepticon",
-    "character": "Megatron",
-    "fact": "His nickname is Buckethead (again, don't ask why)."
+    "charName": "Megatron",
+    "fact": "His nickname is Buckethead (again, don't ask why).",
+    "image": null
   },
   {
-    "id": 4,
     "faction": "Decepticon",
-    "character": "Soundwave",
-    "fact": "No one has ever heard of Soundwave's voice since he swore the oath of silence in Kaon."
+    "charName": "Soundwave",
+    "fact": "No one has ever heard of Soundwave's voice since he swore the oath of silence in Kaon.",
+    "image": null
   },
   {
-    "id": 5,
+    "faction": "Autobot",
+    "charName": "Ratchet",
+    "fact": "His nickname is Hatchet (don't ask why).",
+    "image": null
+  },
+  {
     "faction": "Decepticon",
-    "character": "Skyquake",
-    "fact": "From him, we learn that not all Decepticons are pure evils."
+    "charName": "Skyquake",
+    "fact": "From him, we learn that not all Decepticons are pure evils.",
+    "image": null
   },
   {
-    "id": 6,
     "faction": "Autobot",
-    "character": "Arcee",
-    "fact": "Arcee is very good at masking her emotions, even when faced with tremendous loss."
+    "charName": "Arcee",
+    "fact": "Arcee is very good at masking her emotions, even when faced with tremendous loss.",
+    "image": null
   },
   {
-    "id": 7,
-    "faction": "Autobot",
-    "character": "Bumblebee",
-    "fact": "A fierce warrior to the Decepticons, a loyal friend to the Autobots."
-  },
-  {
-    "id": 8,
     "faction": "Decepticon",
-    "character": "Starscream",
-    "fact": "Honestly, he should lose his T-cog again so we can see more of him in heels XD."
+    "charName": "Starscream",
+    "fact": "Honestly, he should lose his T-cog again so we can see more of him in heels XD.",
+    "image": null
   },
   {
-    "id": 9,
     "faction": "Autobot",
-    "character": "Optimus Prime",
-    "fact": "The last of the Thirteen original Primes."
+    "charName": "Optimus Prime",
+    "fact": "The last of the Thirteen original Primes",
+    "image": null
+  },
+  {
+    "faction": "Autobot",
+    "charName": "Rafael",
+    "fact": "Somehow understands Bumblebee...",
+    "image": null
+  },
+  {
+    "faction": "Decepticon",
+    "charName": "Knockout",
+    "fact": "A perfectionist and a narcissist.",
+    "image": null
+  },
+  {
+    "faction": "Insecticon",
+    "charName": "Airachnid",
+    "fact": "Hated by Autobots and Decepticons alike.",
+    "image": null
+  },
+  {
+    "faction": "Decepticon",
+    "charName": "Breakdown",
+    "fact": "Not necessarily evil, just like Knockout and Skyquake.",
+    "image": null
+  },
+  {
+    "faction": "Autobot",
+    "charName": "Bulkhead",
+    "fact": "Miko's best friend.",
+    "image": null
+  },
+  {
+    "faction": "Autobot",
+    "charName": "Wheeljack",
+    "fact": "If you ain't taking risks, then you're doomed to lose.",
+    "image": null
+  },
+  {
+    "faction": "Autobot",
+    "charName": "Ultra Magnus",
+    "fact": "Stoic, by-the-book, second-in-command of the Autobots (back on Cybertron).",
+    "image": null
+  },
+  {
+    "faction": "Autobot",
+    "charName": "Smokescreen",
+    "fact": "A naive—but could be dependable—member of team Prime.",
+    "image": null
+  },
+  {
+    "faction": "Decepticon",
+    "charName": "Steve",
+    "fact": "Beloved Vehicon from every Transformers universe.",
+    "image": null
+  },
+  {
+    "faction": "Decepticon",
+    "charName": "Shockwave",
+    "fact": "To him, everything in the world only has two characteristics: logical or illogical.",
+    "image": null
+  },
+  {
+    "faction": "Autobot",
+    "charName": "Bumblebee",
+    "fact": "A fierce warrior to the Decepticons, a loyal friend to the Autobots.",
+    "image": null
+  },
+  {
+    "faction": "Autobot",
+    "charName": "Ratchet",
+    "fact": "Grumpy doctor mode on",
+    "image": null
   }
 ]

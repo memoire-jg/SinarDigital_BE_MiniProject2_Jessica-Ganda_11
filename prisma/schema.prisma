@@ -4,13 +4,20 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url = env("DATABASE_URL")
+}
+
+model faction {
+  id        Int       @id @default(autoincrement())
+  name      String    @unique
+  products  product[]
 }
 
 model product {
   id        Int     @id @default(autoincrement())
   faction   String
-  charName String
-  fact      String
+  charName String @map("character")
+  fact      String @unique
   image     String?
+  factionId Int?
+  factionRel faction? @relation(fields: [factionId], references: [id])
 }
